@@ -1,0 +1,306 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.wrapper {
+    background-color: hsl(226, 43%, 10%);
+    color: white;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* user info */
+.section1 {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 20px;
+}
+
+.section1 .info {
+    display: flex;
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 20px;
+}
+
+.section1 .info img {
+    width: 70px;
+    height: 70px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.section1 .info .detail p {
+    color: #8b82f5;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.section1 .time {
+    display: flex;
+}
+
+.section1 .time span {
+    font-size: 15px;
+    color: hsl(235, 45%, 61%);
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.section1 .time span:hover {
+    color: white;
+}
+
+.active {
+    color: white !important;
+}
+
+/* Cards */
+#work,
+#play,
+#study,
+#exercise,
+#social,
+#self-care {
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#work {
+    background-color: hsl(15, 100%, 70%);
+}
+
+#play {
+    background-color: hsl(195, 74%, 62%);
+}
+
+#study {
+    background-color: hsl(348, 100%, 68%);
+}
+
+#exercise {
+    background-color: hsl(145, 58%, 55%);
+}
+
+#social {
+    background-color: hsl(264, 64%, 52%);
+}
+
+#self-care {
+    background-color: hsl(43, 84%, 65%);
+}
+
+.icon {
+    position: absolute;
+    top: -7px;
+    right: 10px;
+    width: 60px;
+}
+
+.card-info {
+    border-radius: 20px;
+    background-color: hsl(235, 46%, 20%);
+    bottom: 0;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+}
+
+.card-info:hover {
+    background-color: #34397b;
+}
+
+.card-info .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-info .header span {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.card-info .header img {
+    cursor: pointer;
+}
+
+.card-info .header img:hover {
+    filter: invert(91%) sepia(64%) saturate(0%) hue-rotate(157deg)
+        brightness(109%) contrast(100%);
+}
+
+.card-info .detail {
+    display: flex;
+    padding-left: 20px;
+}
+
+.card-info .detail .recently {
+    color: hsl(235, 45%, 61%);
+}
+
+/* - Desktop: 1440px */
+@media only screen and (min-width: 769px) {
+    .section1 {
+        height: 415px;
+    }
+
+    .section1 .info {
+        height: 285px;
+        width: 205px;
+        flex-direction: column;
+        padding: 25px 20px 0 20px;
+    }
+
+    .section1 .info .detail p {
+        padding-top: 30px;
+    }
+
+    .section1 .info .detail .name {
+        font-size: 30px;
+        padding-top: 10px;
+    }
+
+    .section1 .time {
+        flex-direction: column;
+        padding: 0 25px 0 25px;
+    }
+
+    /* cards */
+    #work,
+    #play,
+    #study,
+    #exercise,
+    #social,
+    #self-care {
+        width: 200px;
+        height: 195px;
+    }
+
+    .section2 {
+        margin-left: 25px;
+        display: grid;
+        grid-gap: 25px;
+        gap: 25px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card-info {
+        height: 160px;
+    }
+
+    .card-info .detail {
+        flex-direction: column;
+    }
+
+    .card-info .detail .hour {
+        font-size: 30px;
+    }
+
+    .card-info .detail .recently {
+        font-size: 15px;
+        padding-top: 10px;
+    }
+}
+
+/* - Mobile: 375px */
+@media only screen and (max-width: 768px) {
+    body {
+        width: 100%;
+        height: auto;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    /* user info */
+    .section1,
+    .section2 {
+        width: 90%;
+        border-radius: 20px;
+    }
+
+    .section1 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .section1 .info {
+        align-items: center;
+        padding: 30px;
+    }
+
+    .section1 .info .detail {
+        padding-left: 20px;
+    }
+
+    .section1 .info .detail p {
+        padding-bottom: 10px;
+        font-size: 15px;
+    }
+
+    .section1 .time {
+        padding: 15px 30px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .section1 .time span {
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    /* cards */
+    #work,
+    #play,
+    #study,
+    #exercise,
+    #social,
+    #self-care {
+        width: 100%;
+        height: 160px;
+        margin-bottom: 30px;
+    }
+
+    .card-info {
+        height: 120px;
+    }
+
+    .card-info .detail {
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .card-info .detail .recently {
+        font-size: 15px;
+    }
+
+    .card-info .detail .hour {
+        font-size: 25px;
+    }
+}
